@@ -1,0 +1,109 @@
+body, html, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  
+}
+
+.effect-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+/* Contenedor del fondo fluido */
+.background-effect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* detrás */
+}
+
+/* Contenido encima */
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  pointer-events: none;
+  user-select: none; 
+}
+/* Fuerza modo oscuro */
+:root {
+  color-scheme: dark; /* Le dice al navegador que use temas oscuros (scrollbars, formularios, etc.) */
+}
+
+body {
+  background-color: #0d0d0d; /* Tu color de fondo oscuro */
+  color: #ffffff; /* Color del texto */
+}
+
+/* Opcional: si usas componentes o secciones con fondo claro */
+* {
+  background-color: transparent !important;
+  color: inherit;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background: #101010;
+  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+hr {
+  width: 70vw;/* Elimina los márgenes por defecto */
+  padding: 0;
+  top: -10%;
+  left: -40%;
+  border: none;
+  border-top:0.35px solid #ccc; /* o el color que quieras */
+}
+
+
+
+
+
+.effect-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* mejor que 80vh para móviles */
+  overflow: hidden;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* hr ajustado */
+hr {
+  width: 70%;
+  margin: 1rem auto;
+  border: none;
+  border-top: 0.5px solid #ccc;
+}
+
+/* Ajustes responsivos generales */
+@media (max-width: 768px) {
+  .content {
+    padding: 1rem;
+  }
+
+  hr {
+    width: 90%;
+  }
+}

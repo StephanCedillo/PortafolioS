@@ -1,0 +1,12 @@
+.big-name {
+    /* Aquí viene la clave: una fuente de gran tamaño */
+    font-size: 15vw; /* Usa 'vw' para un tamaño responsive */
+    line-height: 1;
+    font-weight: 900;
+    letter-spacing: -5px; /* Ajustar el espaciado entre letras */
+    margin: 0;
+    margin-top:5%;
+  }
+  .trademark {
+    /* Posicionarlo cerca del nombre */
+  }
