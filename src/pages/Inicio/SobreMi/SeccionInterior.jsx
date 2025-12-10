@@ -54,13 +54,9 @@ const SeccionInferior = () => {
       </div>
 
       {/* Tarjetas inferiores */}
-      <div style={estiloContenedorCards}>
-        <ItemCard titulo="cairo." />
-        <ItemCard titulo="oslo." />
-        <ItemCard titulo="chain" />
-      </div>
+    
 
-      {/* Botón de descarga/uso (el de la esquina) */}
+   
       
     </div>
   );

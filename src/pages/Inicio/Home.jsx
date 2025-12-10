@@ -35,7 +35,7 @@ export default function Home() {
             <HeroSection /> 
             <hr></hr>
             {/* Nombre grande del diseño original */}
-             <TitleSection name="Stephan" /> 
+             <TitleSection name="" /> 
 
             {/* Placeholder de ejemplo */}
           </div>

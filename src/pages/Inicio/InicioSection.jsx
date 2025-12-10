@@ -34,13 +34,14 @@ const InicioSection = () => {
           <Home />
         </section>
 
+        
+        <section id="extra">
+          <SobreMi />
+        </section>
         <section id="sobremi">
           <Presentacion />
         </section>
 
-        <section id="extra">
-          <SobreMi />
-        </section>
       </div>
     </div>
   );

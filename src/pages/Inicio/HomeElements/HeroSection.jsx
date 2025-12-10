@@ -35,7 +35,8 @@ const HeroSection = () => {
         <h1 className="hero-title">
           Creative developer <br />
           blending logic <br />
-          and art.
+          and art.<br />
+          Stephan Cedillo
         </h1>
         <br />
         <div className="hero-skills-wrapper">
