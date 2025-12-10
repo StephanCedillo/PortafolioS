@@ -96,6 +96,15 @@ hr {
   border: none;
   border-top: 0.5px solid #ccc;
 }
+.pie-container {
+  display: flex;
+  justify-content: center;   /* centra todo */
+  align-items: center;
+  padding: 30px;
+  color: white;
+  gap: 20px;                 /* antes 40px — ahora más juntos */
+  flex-wrap: wrap;
+}
 
 /* Ajustes responsivos generales */
 @media (max-width: 768px) {
@@ -103,6 +112,153 @@ hr {
     padding: 1rem;
   }
 
+  hr {
+    width: 90%;
+  }
+}
+#sobremi {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Home.css */
+
+.inicio-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #050505; /* Fondo base por si falla la animación */
+  overflow-x: hidden;
+}
+
+.background-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.inicio-content {
+  position: relative;
+  z-index: 1; /* Encima del fondo */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 100px 20px; /* Padding bottom extra para que no choque el final */
+  display: flex;
+  flex-direction: column;
+  gap: 80px; /* Espacio entre la intro y el perfil */
+}
+
+/* Wrapper para agrupar Sobre Mi y Skills */
+.profile-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Separación entre las tarjetas */
+}
+
+/* ESTILO DE TARJETA DE CRISTAL */
+.glass-card {
+  background: rgba(15, 15, 15, 0.6); /* Oscuro translúcido */
+  backdrop-filter: blur(12px); /* Efecto borroso detrás */
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil */
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(190, 35, 35, 0.3); /* Un toque rojo suave al pasar el mouse */
+  transform: translateY(-5px); /* Pequeña elevación */
+}
+
+/* Ajuste responsive */
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+}
+/* Home.css */
+.inicio-container {
+  position: relative;
+  width: 100%;
+  /* INCORRECTO: height: 100vh; (Esto bloquea el scroll si el contenido es mayor) */
+  
+  /* CORRECTO: */
+  min-height: 100vh; 
+  
+  overflow-x: hidden; /* Solo ocultamos el scroll horizontal */
+  /* Asegúrate de NO tener overflow-y: hidden aquí ni en el body */
+}
+.background-effect {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0; /* Al fondo */
+  
+  /* IMPORTANTE: Si no necesitas interactuar con el líquido (clics), añade esto: */
+  /* pointer-events: none; */ 
+  /* PERO: Como tienes mouseForce={20}, querrás interactuar. 
+     Entonces solo asegúrate de que el z-index sea menor que el del contenido. */
+}
+
+.inicio-content {
+  position: relative;
+  z-index: 10; /* Muy por encima del fondo */
+  /* ... resto de estilos */
+}
+:root {
+  color-scheme: dark;
+}
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  
+  /* IMPORTANTE: Usar min-height permite que crezca. height: 100% lo limitaba. */
+  min-height: 100vh; 
+  
+  background-color: #0d0d0d;
+  color: #ffffff;
+  
+  /* ESTO ES LO QUE ARREGLA EL SCROLL: */
+  overflow-x: hidden; /* Oculta scroll horizontal */
+  overflow-y: auto;   /* Permite scroll vertical automático si es necesario */
+}
+.inicio-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh; /* Permite que crezca según el contenido */
+  background-color: #050505;
+  overflow-x: hidden;
+}
+.background-effect {
+  position: fixed; /* FIXED es clave para fondos animados */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0; 
+  pointer-events: none; /* Asegura que el mouse interactúe con el contenido, no con el fondo */
+  /* Si necesitas interactuar con el líquido (mouseForce), quita pointer-events: none 
+     y confía en el z-index, pero asegúrate de que el contenido tenga z-index mayor */
+}
+@media (max-width: 768px) {
+  .glass-card {
+    padding: 20px;
+    border-radius: 16px;
+  }
+  .content {
+    padding: 1rem;
+  }
   hr {
     width: 90%;
   }

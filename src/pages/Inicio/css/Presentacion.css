@@ -1,186 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Dongle&family=Galindo&family=Genos:ital,wght@0,100..900;1,100..900&display=swap');
-* {
+/* Aseguramos que la fuente se aplique globalmente en este componente */
+.pie-container * {
+    font-family: "Science Gothic", "Inter", Helvetica, Arial, sans-serif;
     box-sizing: border-box;
-}
-
-body {
-    display: grid;
-    place-items: center;
-    min-height: 100vh;
-    background: #101010;
-    color: white;
-    font-family: 'Dongle', sans-serif;
-}
-
-.container {
+  }
+  
+  /* Contenedor principal */
+  .pie-container {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    background-color: #101010;
+    /* Alineamos arriba para que la lista larga no centre el gráfico */
+    align-items: flex-start;
+    gap: 60px; /* Más separación entre gráfico y lista */
+    padding: 60px 40px;
     color: white;
-    margin: auto; /* Centra en la pantalla */
-}
-
-.left, .right {
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-wrap: wrap;
+    background-color: transparent; /* Asume que el fondo de la app ya es oscuro */
+  }
+  
+  /* --- SECCIÓN IZQUIERDA (GRÁFICO) --- */
+  .chart-section {
+    flex: 0 0 auto; /* No crecer ni encoger */
+    width: 320px;
     text-align: center;
-}
-
-.left {
-    width: 30%;
-    padding: 40px;
-}
-.right{ width: 70%}
-.left h1 {
-    font-size: 4rem;
-    font-family: 'Delicious Handrawn', cursive;
-    margin-bottom: 5px;
-}
-
-.left h3 {
-    font-size: 1rem;
-    font-family: 'Dongle', sans-serif;
-    margin-top: 0;
-    margin-bottom: 10px;
-    line-height: 1;
-    margin-left: 3rem;
-}
-
-.left p {
+    position: sticky;
+    top: 40px; /* Si la lista es muy larga, el gráfico se queda visible al hacer scroll */
+  }
+  
+  .chart-wrapper {
+      height: 320px; /* Altura fija para el canvas */
+      position: relative;
+  }
+  
+  .chart-section h2 {
+    font-weight: 700;
     font-size: 1.8rem;
-    font-family: 'Genos', sans-serif;
-    max-width: 80%;
-}
-
-.right table {
-    padding-right: 1rem;
-    width: 100%;
-    border-collapse: collapse;
-    font-family: 'Galindo', sans-serif;
-}
-
-th, td {
-    border-bottom: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-}
-
-
-th{
-    font-family: Genos;
-    font-size: 2em;
-}
-td{
-    font-family: Galindo;
-    font-size: 0.85em;
-    
-}
-.middle{
-    font-size: 0.50em;
-}
-/* Pantallas grandes (Desktop Full HD y superiores) */
-@media (min-width: 1200px) {
-    .container {
-        width: 100%;
-    }
-    .left h1 {
-        font-size: 4rem;
-    }
-    .left p {
-        font-size: 2rem;
-    }
-    .right img {
-        max-width: 500px;
-    }
-}
-
-/* Laptops y tablets grandes (768px - 1199px) */
-@media (max-width: 1199px) {
-    .left h1 {
-        font-size: 3rem;
-    }
-    .left p {
-        font-size: 1.2rem;
-    }
-    .right img {
-        max-width: 350px;
-    }
-}
-
-/* Tablets y móviles grandes (480px - 767px) */
-@media (max-width: 767px) {
-    .container {
-        flex-direction: column;
-        height: auto;
-        padding: 20px;
-    }
-    .left, .right {
-        width: 100%;
-    }
-    .left h1 {
-        font-size: 2.5rem;
-    }
-    .left p {
-        font-size: 1.4rem;
-    }
-    .right img {
-        width: 60%;
-        max-width: 300px;
-    }
-}
-
-/* Móviles pequeños (menos de 480px) */
-@media (max-width: 480px) {
-    .left h1 {
-        font-size: 2rem;
-    }
-    .left p {
-        font-size: 1.2rem;
-    }
-    .right img {
-        width: 50%;
-        max-width: 250px;
-    }
-}
-.card {
-    position: fixed;
-    z-index: 1000;
-    width: 200px;
-    height: 100px;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    padding: 0;
+    margin-bottom: 30px;
+    color: #ffffff;
+    letter-spacing: 1px;
+  }
+  
+  
+  /* --- SECCIÓN DERECHA (NUEVA LISTA) --- */
+  .skills-list-container {
+    flex: 1; /* Ocupa el espacio restante */
+    max-width: 700px; /* Ancho máximo para que no se estire demasiado */
+    min-width: 300px;
+    text-align: left;
+    padding-top: 10px; /* Alinear visualmente con el título del gráfico */
+  }
+  
+  /* Cada fila de habilidad (ej: 01 Frontend...) */
+  .skill-row {
     display: flex;
-    justify-content: center;  /* Alinea la imagen horizontalmente */
-    align-items: center;  /* Alinea la imagen verticalmente */
-    text-align: center;
-    overflow: hidden;
-}
-
-.card img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;  /* Esto cubre el contenedor */
-    object-position: center;  /* Centra la imagen */
-    display: block;
-}
-
-/* Ajustes en pantallas más pequeñas */
-@media (max-width: 600px) {
-    .card {
-        width: 150px;
-        height: 150px;
-        bottom: 10px;
-        right: 10px;
-    }
-    .card img {
-        object-fit: contain;  /* Ajusta la imagen sin recortes en pantallas pequeñas */
-    }
-}
+    align-items: flex-start;
+    /* Línea separadora sutil debajo de cada item */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efecto hover sutil para la fila */
+  .skill-row:hover {
+      transform: translateX(10px);
+  }
+  
+  /* El número grande (01, 02...) */
+  .skill-number {
+    flex: 0 0 80px; /* Ancho fijo para la columna del número */
+    font-size: 1.8rem;
+    font-weight: 300;
+    /* Color grisáceo/transparente como en la foto */
+    color: rgba(255, 255, 255, 0.3);
+    padding-top: 2px; /* Ajuste fino de alineación vertical */
+  }
+  
+  .skill-content {
+    flex: 1;
+  }
+  
+  /* Título de la categoría (Frontend, Backend) */
+  .skill-content h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+  }
+  
+  /* La lista de tecnologías separadas por comas */
+  .skill-content p {
+    font-size: 1rem;
+    /* Color blanco con transparencia para que no sea tan brillante */
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.6;
+    margin: 0;
+    font-weight: 400;
+  }
+  
+  /* Responsive para móviles */
+  @media (max-width: 768px) {
+      .pie-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+      }
+  
+      .chart-section {
+          position: static; /* Quitar sticky en móvil */
+          width: 100%;
+          max-width: 340px;
+      }
+  
+      .skills-list-container {
+          width: 100%;
+          padding-left: 0;
+      }
+  
+      .skill-number {
+          flex: 0 0 50px;
+          font-size: 1.5rem;
+      }
+  }

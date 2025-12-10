@@ -1,4 +1,3 @@
-// HeaderBio.jsx 
 import React from 'react';
 
 const HeaderBio = () => { 
@@ -8,24 +7,36 @@ const HeaderBio = () => {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'center',
-    height: '60vh',
+    // CAMBIO 1: Usar min-height en vez de height fijo evita que se corte si el texto es largo
+    minHeight: '60vh', 
     fontFamily: '"Science Gothic", sans-serif',
+    
+    // CAMBIO 2: Esto es lo vital. Empuja el contenido hacia abajo.
+    // Ajusta este valor (80px, 100px) según la altura de tu barra de navegación.
+    marginTop: '80px', 
+    // Opcional: asegúrate que el z-index lo ponga por encima
+    position: 'relative', 
+    zIndex: 2,
   };
 
   // Texto principal
   const estiloTexto = {
     color: 'white',
-    fontSize: '1.75vw',
-    maxWidth: '75%',
-    lineHeight: '1.35',
+    // CAMBIO 3: '1.5vw' es muy pequeño en celular. 
+    // clamp(mínimo, ideal, máximo) hace que el texto sea responsive pero legible.
+    fontSize: 'clamp(1.2rem, 1.5vw, 2.5rem)', 
+    maxWidth: '90%', // Un poco más ancho para aprovechar espacio
+    lineHeight: '1.5', // Un poco más de aire entre líneas
     fontWeight: 300,
     letterSpacing: '0.5px',
   };
 
-  // Resaltado
+  // Resaltado (Ajustado a tus colores de referencia anteriores)
   const highlight = {
-    color: '#9AE6B4',  // Verde suave elegante (puedo cambiarlo a vino si quieres)
+    
+    color: '#9AE6B4',    
     fontWeight: 500,
+    textShadow: '0 0 10px rgba(154, 230, 180, 0.2)', // Un brillito sutil
   };
 
   return (
@@ -50,17 +61,6 @@ const HeaderBio = () => {
         Sigo aprendiendo cada día para crecer en lo técnico y lo creativo.
       </h1>
 
-      <div style={{
-        color: 'white',
-        marginTop: '20px',
-        display: 'flex',
-        justifyContent: 'flex-end',
-        width: '100%',
-        fontSize: '0.8em',
-        fontFamily: '"Science Gothic", sans-serif',
-      }}>
-        <span></span>
-      </div>
     </div>
   );
 };

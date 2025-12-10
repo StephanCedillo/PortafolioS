@@ -25,8 +25,8 @@ const SobreMi = () => {
 
   return (
     <div style={estiloContenedor}>
-      {/* Columna Izquierda: Imagen = imagenSrc={imagenStephan} */}
-      <Perfil />
+      {/* Columna Izquierda:  */}
+      <Perfil  imagenSrc={imagenStephan} />
 
       {/* Columna Derecha: Contenido */}
       <div style={estiloContenidoDerecho}>

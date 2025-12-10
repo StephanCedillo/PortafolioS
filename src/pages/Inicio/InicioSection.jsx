@@ -7,41 +7,36 @@ import "./Css/Home.css";
 const InicioSection = () => {
   return (
     <div className="inicio-container">
-      {/* Fondo fluido que cubre toda la pantalla */}
       <div className="background-effect">
         <LiquidEther
-          colors={['#BE2323', '#FF9E9E', '#B19EEF']}
+          colors={['#BE2323', '#FF9E9E', '#B19EEF']} 
+          // ... tus configuraciones ...
           mouseForce={20}
           cursorSize={100}
-          isViscous={false}
-          viscous={30}
-          iterationsViscous={32}
-          iterationsPoisson={32}
-          resolution={0.5}
-          isBounce={false}
           autoDemo={true}
-          autoSpeed={0.5}
-          autoIntensity={2.2}
-          takeoverDuration={0.25}
-          autoResumeDelay={3000}
-          autoRampDuration={0.6}
         />
       </div>
 
-      {/* Contenido encima del fondo */}
       <div className="inicio-content">
-        <section id="presentacion">
+        {/* Intro Principal */}
+        <section id="home" className="section-block">
           <Home />
         </section>
 
-        
-        <section id="extra">
-          <SobreMi />
-        </section>
-        <section id="sobremi">
-          <Presentacion />
-        </section>
+        {/* CONTENEDOR DE PERFIL: Agrupa Historia y Skills */}
+        <div className="profile-wrapper">
+            
+            {/* Tarjeta 1: Quién soy */}
+            <section id="sobremi" className="glass-card">
+              <SobreMi />
+            </section>
 
+            {/* Tarjeta 2: Mis Herramientas (El diagrama) */}
+            <section id="skills" className="glass-card">
+              <Presentacion />
+            </section>
+
+        </div>
       </div>
     </div>
   );

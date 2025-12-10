@@ -1,23 +1,22 @@
-// Perfil.jsx
 import React from 'react';
+import './css/Perfil.css'; // Asegúrate de crear este archivo o ajustar la ruta
 
 const Perfil = ({ imagenSrc }) => {
-  const estilo = {
-    // Esto simula la parte de la imagen
-    width: '40%', // O el ancho que desees
-    height: '100vh',
-    backgroundImage: `url(${imagenSrc})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    position: 'relative',
-    // Asegúrate de usar la imagen real si la tienes, o una de placeholder
-  };
+  // Si no hay imagen, usamos un color de respaldo o una imagen por defecto
+  const backgroundStyle = imagenSrc ? `url(${imagenSrc})` : 'none';
 
   return (
-    <div style={estilo}>
-      {/* Podrías poner la imagen directamente, pero el fondo es más versátil en este caso */}
-      {/* Simplemente para mostrar la estructura con el texto, usamos un estilo de fondo. */}
+    <div className="perfil-container">
+      {/* Capa de la imagen de fondo */}
+      <div 
+        className="perfil-bg" 
+        style={{ backgroundImage: backgroundStyle }} 
+        role="img" 
+        aria-label="Foto de perfil del desarrollador"
+      />
+      
+      {/* Capa de degradado para que se mezcle con el fondo de la web */}
+      <div className="perfil-overlay" />
     </div>
   );
 };

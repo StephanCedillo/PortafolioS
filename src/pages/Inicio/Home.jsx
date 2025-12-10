@@ -33,7 +33,7 @@ export default function Home() {
           <div className="content">
             {/* Título y Habilidades del diseño original */}
             <HeroSection /> 
-            <hr></hr>
+            
             {/* Nombre grande del diseño original */}
              <TitleSection name="" /> 
 

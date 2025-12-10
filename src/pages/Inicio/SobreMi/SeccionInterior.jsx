@@ -1,63 +1,61 @@
-// SeccionInferior.jsx
 import React from 'react';
-
-const ItemCard = ({ titulo }) => {
-  const estiloCard = {
-    backgroundColor: 'black',
-    border: '1px solid rgba(255, 255, 255, 0.1)',
-    width: 'calc(33.33% - 20px)', // Para 3 columnas con espacio
-    height: '25vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    margin: '10px',
-  };
-
-  const estiloTitulo = {
-    color: 'white',
-    fontSize: '2em',
-    textTransform: 'lowercase',
-    fontWeight: 'bold',
-  };
-
-  return (
-    <div style={estiloCard}>
-      <span style={estiloTitulo}>{titulo}</span>
-    </div>
-  );
-};
+import './css/SeccionInferior.css'; // ¡No olvides importar el CSS!
 
 const SeccionInferior = () => {
-  const estiloBarra = {
-    display: 'flex',
-    justifyContent: 'space-around',
-    color: 'white',
-    borderTop: '1px solid rgba(255, 255, 255, 0.3)',
-    padding: '10px 0',
-    fontSize: '0.9em',
-    width: '100%',
-  };
-
-  const estiloContenedorCards = {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    padding: '0 10px',
-  };
-
   return (
-    <div style={{ width: '100%' }}>
-      {/* Barra de Navegación "Digital Nomad" / "Creative Developer" */}
-      <div style={estiloBarra}>
-        <span>Digital Nomad</span>
-        <span>Creative Developer</span>
+    <div className="footer-container">
+      
+      {/* 1. BARRA TIPO "TICKER" (Animación de texto infinito) */}
+      <div className="marquee-container">
+        <div className="marquee-content">
+          {/* Repetimos el texto para que la animación sea fluida */}
+          <span className="marquee-item">DIGITAL NOMAD</span>
+          <span className="marquee-item">///</span>
+          <span className="marquee-item">CREATIVE DEVELOPER</span>
+          <span className="marquee-item">///</span>
+          <span className="marquee-item">OPEN TO WORK</span>
+          <span className="marquee-item">///</span>
+          <span className="marquee-item">DIGITAL NOMAD</span>
+          <span className="marquee-item">///</span>
+          <span className="marquee-item">CREATIVE DEVELOPER</span>
+          <span className="marquee-item">///</span>
+          <span className="marquee-item">OPEN TO WORK</span>
+        </div>
       </div>
 
-      {/* Tarjetas inferiores */}
-    
+      {/* 2. FRASE DECORATIVA GIGANTE */}
+      <div className="big-statement">
+        LET'S BUILD<br />THE FUTURE
+      </div>
 
-   
-      
+      {/* 3. TARJETAS DE CONTACTO / SOCIALES */}
+      <div className="cards-grid">
+        
+        {/* Card 1: GitHub */}
+        <a href="https://github.com/tu-usuario" target="_blank" rel="noreferrer" className="footer-card">
+          <span className="card-title">GitHub</span>
+          <span className="card-subtitle">Check my code</span>
+        </a>
+
+        {/* Card 2: LinkedIn */}
+        <a href="https://linkedin.com/in/tu-usuario" target="_blank" rel="noreferrer" className="footer-card">
+          <span className="card-title">LinkedIn</span>
+          <span className="card-subtitle">Let's connect</span>
+        </a>
+
+        {/* Card 3: Email */}
+        <a href="mailto:tuemail@gmail.com" className="footer-card">
+          <span className="card-title">Email</span>
+          <span className="card-subtitle">Say hello</span>
+        </a>
+
+      </div>
+
+      {/* Copyright pequeño */}
+      <div style={{ textAlign: 'center', opacity: 0.3, fontSize: '0.8rem', marginTop: '40px' }}>
+        © 2025 Stephan. All rights reserved.
+      </div>
+
     </div>
   );
 };
