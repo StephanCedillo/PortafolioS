@@ -1,0 +1,131 @@
+/* src/components/css/SobreMi.css */
+
+/* --- ESTRUCTURA DE LA SECCIÓN (Para que coincida con el resto) --- */
+.sobre-mi-section {
+  background-color: #0d1117; /* Mismo fondo dark que el resto */
+  padding: 5rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.sobre-mi-container {
+  max-width: 800px;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+/* Título de la sección (Estilo consistente) */
+.sobre-mi-header {
+  font-family: "Science Gothic", sans-serif; /* Usamos tu fuente también en el título */
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+.sobre-mi-header span {
+  /* Usamos tu color rosado/salmón para el highlight */
+  background: linear-gradient(90deg, #FF9E9E, #BE2323); 
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* --- TARJETA DE CONTENIDO --- */
+.text-card {
+  background-color: #1f2937; /* Fondo de tarjeta */
+  border: 1px solid #30363d;
+  border-radius: 16px;
+  padding: 2.5rem;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+/* Decoración de borde brillante superior */
+.text-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #BE2323, transparent);
+  opacity: 0.7;
+}
+
+/* --- TU CSS ORIGINAL (ESTILOS DE TEXTO) --- */
+.text-content {
+  font-family: "Science Gothic", sans-serif;
+  font-weight: 300; 
+  color: #e0e0e0;
+  line-height: 1.8; /* Aumenté un poco para más elegancia */
+  font-size: 1.15rem; 
+  letter-spacing: 0.02em; 
+}
+
+.text-content p {
+  margin-bottom: 1.5rem;
+}
+
+.text-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tus estilos para strong */
+.text-content strong {
+  font-family: "Science Gothic", sans-serif;
+  color: #FF9E9E; 
+  font-weight: 700; 
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.text-content strong:hover {
+  color: #B19EEF; 
+  text-shadow: 0 0 12px rgba(177, 158, 239, 0.6); 
+}
+
+/* --- FUN FACT (Tu estilo original optimizado) --- */
+.fun-fact {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: rgba(13, 17, 23, 0.5); /* Fondo un poco más oscuro para contraste */
+  border-left: 4px solid #BE2323; 
+  border-radius: 0 12px 12px 0;
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start; /* Alineado arriba por si el texto es largo */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.fun-fact:hover {
+  background: linear-gradient(90deg, rgba(190, 35, 35, 0.05), transparent);
+  transform: translateX(8px);
+}
+
+.fun-fact .icon {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.fun-fact p {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400; 
+  color: #d1d5db;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sobre-mi-header { font-size: 2.2rem; }
+  .text-card { padding: 1.5rem; }
+  .text-content { font-size: 1rem; }
+  .fun-fact { flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
+  .fun-fact .icon { margin-bottom: 0.5rem; }
+}

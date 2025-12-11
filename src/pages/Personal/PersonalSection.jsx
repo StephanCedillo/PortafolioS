@@ -1,20 +1,17 @@
 import Planes from "./Planes";
 import Contacto from "./Contacto";
-import Preguntas from "./Preguntas";
+import FooterCV from "./FooterCV";
 
 const PersonalSection = () => {
   return (
     <div>
-      <section id="planes">
-        <Planes />
-      </section>
-
+      
       <section id="contacto">
         <Contacto />
       </section>
 
       <section id="preguntas">
-        <Preguntas />
+        <FooterCV />
       </section>
     </div>
   );

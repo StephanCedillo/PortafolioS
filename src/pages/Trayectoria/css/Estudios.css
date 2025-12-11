@@ -1,0 +1,176 @@
+/* src/components/css/Educacion.css */
+
+:root {
+    --edu-bg: #0d1117;
+    --edu-card-bg: #1f2937;
+    --edu-border: #30363d;
+    --edu-accent: #3b82f6; /* Azul brillante */
+    --edu-secondary: #8b949e;
+    --edu-highlight: #eab308; /* Amarillo para destacar logros */
+  }
+  
+  .edu-section {
+    background-color: var(--edu-bg);
+    padding: 5rem 1.5rem;
+    font-family: 'Inter', sans-serif;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .edu-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* --- TÍTULO --- */
+  .edu-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .edu-title {
+    font-size: 3rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+  }
+  
+  .edu-title span {
+    background: linear-gradient(90deg, #3b82f6, #22d3ee);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  /* --- TIMELINE CONTAINER --- */
+  .edu-timeline {
+    position: relative;
+    padding-left: 2rem;
+  }
+  
+  /* La línea vertical */
+  .edu-timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 2px;
+    background: linear-gradient(to bottom, #3b82f6, rgba(59, 130, 246, 0.1));
+  }
+  
+  /* --- ITEMS (TARJETAS) --- */
+  .edu-item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem; /* Espacio para el punto conector */
+  }
+  
+  /* El punto en la línea (Marker) */
+  .edu-marker {
+    position: absolute;
+    left: -2.6rem; /* Ajuste para centrar en la línea */
+    top: 0;
+    width: 16px;
+    height: 16px;
+    background-color: var(--edu-bg);
+    border: 3px solid var(--edu-accent);
+    border-radius: 50%;
+    z-index: 10;
+    transition: all 0.3s ease;
+  }
+  
+  /* Efecto especial para el item actual (Universidad) */
+  .edu-item.current .edu-marker {
+    background-color: var(--edu-accent);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(59, 130, 246, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); }
+  }
+  
+  /* La Tarjeta */
+  .edu-card {
+    background-color: var(--edu-card-bg);
+    border: 1px solid var(--edu-border);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .edu-item:hover .edu-card {
+    transform: translateX(10px);
+    border-color: var(--edu-accent);
+  }
+  
+  /* Decoración de fondo en la tarjeta */
+  .edu-card-bg-icon {
+    position: absolute;
+    right: -20px;
+    bottom: -20px;
+    font-size: 8rem;
+    opacity: 0.03;
+    color: white;
+    pointer-events: none;
+  }
+  
+  /* --- CONTENIDO DE LA TARJETA --- */
+  .edu-institution {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .edu-degree {
+    font-size: 1.1rem;
+    color: #bfdbfe; /* Azul muy claro */
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  
+  .edu-details {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .edu-date-badge {
+    background-color: rgba(59, 130, 246, 0.1);
+    color: #60a5fa;
+    padding: 0.25rem 0.75rem;
+    border-radius: 99px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: monospace;
+    border: 1px solid rgba(59, 130, 246, 0.3);
+  }
+  
+  .edu-status {
+    font-size: 0.85rem;
+    color: var(--edu-secondary);
+    font-style: italic;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .edu-timeline::before { left: 10px; }
+    .edu-marker { left: 2px; }
+    .edu-item { padding-left: 2rem; }
+    .edu-timeline { padding-left: 1rem; }
+    .edu-institution { font-size: 1.25rem; flex-direction: column; align-items: flex-start; }
+  }

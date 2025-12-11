@@ -1,0 +1,172 @@
+/* src/components/css/Contacto.css */
+
+:root {
+    --contact-bg: #0d1117;
+    --contact-card: #1f2937;
+    --contact-border: #30363d;
+    --contact-accent: #3b82f6; /* Azul */
+    --contact-text: #e5e7eb;
+    --contact-label: #9ca3af;
+  }
+  
+  .contact-section {
+    background-color: var(--contact-bg);
+    padding: 5rem 1.5rem;
+    font-family: 'Inter', system-ui, sans-serif;
+    min-height: 80vh; /* Que ocupe buen espacio */
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .contact-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Columna derecha un poco más ancha */
+    gap: 4rem;
+    align-items: start;
+  }
+  
+  /* --- LADO IZQUIERDO: INFO --- */
+  .contact-info h2 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: white;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+  }
+  
+  .contact-highlight {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .contact-desc {
+    color: var(--contact-label);
+    font-size: 1.1rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+  }
+  
+  .contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .method-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+    background-color: rgba(255, 255, 255, 0.02);
+  }
+  
+  .method-item:hover {
+    background-color: rgba(59, 130, 246, 0.1);
+    border-color: rgba(59, 130, 246, 0.3);
+    transform: translateX(10px);
+  }
+  
+  .method-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--contact-card);
+    color: var(--contact-accent);
+  }
+  
+  /* --- LADO DERECHO: FORMULARIO --- */
+  .contact-form-wrapper {
+    background-color: var(--contact-card);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid var(--contact-border);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-label {
+    display: block;
+    color: var(--contact-label);
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  
+  .form-input, .form-textarea {
+    width: 100%;
+    padding: 1rem;
+    background-color: #111827; /* Más oscuro que la tarjeta */
+    border: 1px solid var(--contact-border);
+    border-radius: 8px;
+    color: white;
+    font-size: 1rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    box-sizing: border-box; /* Importante para que no se salga */
+  }
+  
+  .form-textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  /* Efecto Focus Neon */
+  .form-input:focus, .form-textarea:focus {
+    outline: none;
+    border-color: var(--contact-accent);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+  }
+  
+  .send-btn {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  .send-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+  }
+  
+  .send-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Responsive */
+  @media (max-width: 900px) {
+    .contact-container {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+    .contact-info h2 { font-size: 2.5rem; text-align: center; }
+    .contact-desc { text-align: center; }
+  }

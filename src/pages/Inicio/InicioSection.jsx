@@ -1,6 +1,7 @@
 import Home from "./Home";
 import Presentacion from "./Presentacion";
 import SobreMi from "./SobreMi";
+import AboutText from "./Texto";
 import LiquidEther from "../../Components/UI/EffectBackground";
 import "./Css/Home.css";
 
@@ -34,6 +35,9 @@ const InicioSection = () => {
             {/* Tarjeta 2: Mis Herramientas (El diagrama) */}
             <section id="skills" className="glass-card">
               <Presentacion />
+            </section>
+            <section id="about" className="glass-card">
+              <AboutText />
             </section>
 
         </div>

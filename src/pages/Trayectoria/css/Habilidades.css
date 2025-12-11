@@ -1,0 +1,248 @@
+/* src/components/css/Habilidades.css */
+
+:root {
+    --bg-main: #0d1117;       /* Fondo muy oscuro (tipo GitHub Dark) */
+    --bg-card: #1f2937;       /* Fondo de tarjeta */
+    --bg-tag: #161b22;        /* Fondo sección soft skills */
+    --border-color: #30363d;
+    --border-hover: #8b949e;
+    --text-primary: #ffffff;
+    --text-secondary: #8b949e;
+    --primary-glow: rgba(56, 189, 248, 0.5); /* Azul neón */
+  }
+  
+  /* --- ESTRUCTURA GENERAL --- */
+  .hab-section {
+    min-height: 100vh;
+    background-color: var(--bg-main);
+    padding: 5rem 1.5rem;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-primary);
+  }
+  
+  .hab-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* --- HEADER --- */
+  .hab-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .hab-title {
+    font-size: 3rem;
+    font-weight: 900;
+    margin-bottom: 1rem;
+    letter-spacing: -0.05em;
+  }
+  
+  .hab-title-highlight {
+    background: linear-gradient(to right, #60a5fa, #a855f7);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  
+  .hab-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  /* --- GRID DE TARJETAS --- */
+  .hab-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  
+  /* --- TARJETA INDIVIDUAL (CARD) --- */
+  .hab-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    /* Para que el glow funcione */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .hab-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--border-hover);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Barra de brillo superior */
+  .hab-card-glow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hab-card:hover .hab-card-glow {
+    opacity: 1;
+  }
+  
+  /* Icono y Título */
+  .hab-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .hab-icon-box {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 0.75rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .hab-card:hover .hab-icon-box {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .hab-cat-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0;
+  }
+  
+  /* Lista de Items */
+  .hab-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+  
+  .hab-item-name {
+    display: block;
+    font-weight: 500;
+    color: #e5e7eb;
+  }
+  
+  .hab-item-level {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    font-family: 'Fira Code', monospace; /* Fuente monoespaciada para toque hacker */
+    margin-top: 4px;
+  }
+  
+  /* Barra de progreso decorativa */
+  .hab-progress-bg {
+    width: 100%;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 2px;
+    margin-top: 6px;
+    overflow: hidden;
+  }
+  
+  .hab-progress-fill {
+    height: 100%;
+    width: 0%; /* Inicia en 0 para animar */
+    opacity: 0.6;
+    transition: width 0.8s ease, opacity 0.3s ease;
+  }
+  
+  .hab-card:hover .hab-progress-fill {
+    width: 75%; /* Se llena al hacer hover */
+    opacity: 1;
+  }
+  
+  /* --- SECCIÓN SOFT SKILLS --- */
+  .hab-soft-container {
+    background-color: var(--bg-tag);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hab-soft-text {
+    flex: 1;
+    min-width: 300px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hab-soft-text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+  }
+  
+  .hab-soft-text p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+  }
+  
+  .hab-tags-wrapper {
+    flex: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 0.75rem;
+    min-width: 300px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hab-tag {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: #d1d5db;
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 1rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: default;
+  }
+  
+  .hab-tag:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: #6b7280;
+  }
+  
+  /* Gradientes específicos para CSS puro */
+  .grad-red { background: linear-gradient(90deg, #ef4444, #f97316); }
+  .grad-blue { background: linear-gradient(90deg, #3b82f6, #06b6d4); }
+  .grad-yellow { background: linear-gradient(90deg, #eab308, #ca8a04); }
+  .grad-purple { background: linear-gradient(90deg, #a855f7, #ec4899); }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .hab-title { font-size: 2.25rem; }
+    .hab-soft-container { flex-direction: column; text-align: left; }
+    .hab-tags-wrapper { justify-content: flex-start; }
+  }

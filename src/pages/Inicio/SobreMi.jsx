@@ -2,7 +2,6 @@
 import React from 'react';
 import Perfil from './SobreMi/Perfil';
 import HeaderBio from './SobreMi/HeaderBio';
-import SeccionInterior from './SobreMi/SeccionInterior';
 import meImg from './assets/me.jpg';
 const SobreMi = () => {
   const estiloContenedor = {
@@ -31,7 +30,7 @@ const SobreMi = () => {
       {/* Columna Derecha: Contenido */}
       <div style={estiloContenidoDerecho}>
         <HeaderBio/>
-        <SeccionInterior />
+        
       </div>
     </div>
   );
