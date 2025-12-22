@@ -1,12 +1,16 @@
 import Habilidades from "./Habilidades";
 import Estudios from "./Estudios";
 import Proyectos from "./Proyectos";
-
+import Ejemplos from "./Ejemplos"
 const TrayectoriaSection = () => {
   return (
     <div>
       <section id="habilidades">
         <Habilidades />
+      </section>
+
+      <section id="ejemplos">
+        <Ejemplos />
       </section>
 
       <section id="estudios">

@@ -133,3 +133,64 @@
   }
   
   
+
+  /* src/pages/Inicio/HomeElements/css/HeroSection.css */
+
+/* ... tus estilos normales arriba ... */
+
+/* --- RESPONSIVE FIX (Móviles y Tablets) --- */
+@media (max-width: 960px) {
+  .hero-container {
+    flex-direction: column; /* Apilar verticalmente: Texto arriba, Imagen abajo */
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0; /* Reducir padding interno */
+    min-height: auto; /* Altura automática */
+    gap: 40px; /* Espacio entre texto e imagen */
+  }
+
+  /* El lado del texto */
+  .hero-left {
+    max-width: 100%; /* Ocupar todo el ancho */
+    width: 100%;
+    align-items: center; /* Centrar items */
+    text-align: center; /* Centrar texto */
+  }
+
+  /* El lado de la imagen */
+  .hero-right {
+    max-width: 100%;
+    width: 100%;
+    justify-content: center; /* Centrar imagen horizontalmente */
+  }
+
+  /* Título más pequeño */
+  .hero-title {
+    font-size: clamp(2rem, 8vw, 3rem); /* Mucho más pequeño para móvil */
+    text-align: center; /* Centrado */
+    margin-bottom: 1.5rem;
+  }
+
+  /* Imagen responsiva */
+  .hero-image {
+    width: 80%; /* Que no ocupe toda la pantalla */
+    max-width: 300px; /* Límite de tamaño */
+    height: auto; /* Mantener proporción */
+    margin: 0 auto; /* Centrar bloque */
+  }
+
+  /* Barra de Skills (Art Direction...) */
+  .hero-skills-wrapper {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .hero-skills {
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .skill-item {
+    font-size: 0.8rem; /* Letra más pequeña en la barra */
+  }
+}

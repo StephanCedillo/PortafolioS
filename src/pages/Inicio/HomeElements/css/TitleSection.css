@@ -1,10 +1,246 @@
+/* src/components/css/TitleSection.css */
+
+.title-section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 15vh; /* Ajusta esto según cuánto espacio quieras que ocupe */
+  padding: 2rem;
+  background-color: transparent; /* Asumiendo que está sobre el fondo general */
+  perspective: 1000px; /* Para posibles efectos 3D */
+}
+
+/* --- EL NOMBRE GIGANTE --- */
 .big-name {
-    /* Aquí viene la clave: una fuente de gran tamaño */
-    font-size: 15vw; /* Usa 'vw' para un tamaño responsive */
-    line-height: 1;
-    font-weight: 900;
-    letter-spacing: -5px; /* Ajustar el espaciado entre letras */
-    margin: 0;
-    margin-top:5%;
+  position: relative;
+  /* clamp(mínimo, preferido, máximo) hace que la fuente sea fluida pero controlada */
+  font-size: clamp(5rem, 18vw, 14rem); 
+  font-family: "Science Gothic", "Inter", sans-serif; /* Tu fuente principal */
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em; /* Letras muy juntas para estilo moderno */
+  margin: 0;
+  
+  /* Gradiente Metálico Suave */
+  background: linear-gradient(180deg, #ffffff 0%, #a1a1aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Sombra sutil para despegarlo del fondo */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  
+  cursor: default;
+  transition: transform 0.4s ease-out;
+  
+  /* Animación de entrada */
+  animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* src/components/css/TitleSection.css */
+
+.big-name {
+  position: relative;
+  font-size: clamp(5rem, 18vw, 14rem); 
+  font-family: "Science Gothic", "Inter", sans-serif;
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: -0.06em;
+  margin: 0;
+  
+  /* --- CAMBIO CLAVE: GRADIENTE ANIMABLE --- */
+  /* Creamos un gradiente que tiene zonas oscuras y claras (Efecto metal) */
+  background: linear-gradient(
+    135deg, 
+    #71717a 0%,    /* Gris oscuro */
+    #e4e4e7 25%,   /* Blanco brillo */
+    #71717a 50%,   /* Gris oscuro */
+    #e4e4e7 75%,   /* Blanco brillo */
+    #71717a 100%   /* Gris oscuro */
+  );
+  
+  /* Hacemos el fondo el doble de grande para poder moverlo */
+  background-size: 200% auto;
+  
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  
+  /* Sombra para que no se vea plano */
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.5));
+  
+  cursor: default;
+  
+  /* Animamos la POSICIÓN del fondo, no el color. Esto sí es suave. */
+  transition: background-position 0.8s cubic-bezier(0.25, 1, 0.5, 1), transform 0.4s ease-out;
+  
+  /* Animación de entrada inicial */
+  animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* --- ESTADO HOVER --- */
+.big-name:hover {
+  /* Al pasar el mouse, movemos el gradiente. 
+     Parece que una luz pasa por encima del texto */
+  background-position: 100% center; 
+  
+  /* Escala sutil */
+  transform: scale(1.02) translateY(0);
+  
+  /* Opcional: Añadir un brillo de color sutil (el verde de tu marca) */
+  filter: drop-shadow(0 0 15px rgba(46, 160, 123, 0.3)); 
+}
+
+/* --- EL TRADEMARK (TM) --- */
+.trademark {
+  font-size: 0.10em; /* Relativo al tamaño del texto padre */
+  font-family: "Fira Code", monospace; /* Fuente técnica */
+  font-weight: 400;
+  letter-spacing: 0;
+  
+  position: absolute;
+  top: 0.1em;
+  right: -0.3em; /* Lo sacamos un poco hacia afuera */
+  
+  /* Color de acento (El verde de tu chaqueta o el salmón) */
+  color: #2ea07b; 
+  /* color: #FF9E9E; <--- Usa este si prefieres el rosado */
+  
+  /* Quitamos el gradiente del padre para este elemento */
+  -webkit-text-fill-color: initial; 
+  background: none;
+}
+
+/* --- SUBTÍTULO (Opcional) --- */
+.hero-subtitle {
+  margin-top: 1rem;
+  font-family: "Fira Code", monospace;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: #8b949e;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  
+  animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) 0.3s forwards; /* Retardo de 0.3s */
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.separator {
+  color: #2ea07b; /* Acento verde */
+  margin: 0 0.5rem;
+}
+
+/* --- ANIMACIÓN DE ENTRADA --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+  .big-name {
+    letter-spacing: -0.04em; /* Menos apretado en móvil para legibilidad */
   }
   
+  .trademark {
+    right: -0.2em;
+    font-size: 0.2em;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* src/components/css/TitleSection.css */
+
+.title-section-container {
+  display: flex;
+  flex-direction: column;
+  
+  /* CAMBIO CLAVE: Alineamos al inicio (arriba), no al centro */
+  justify-content: flex-start; 
+  align-items: center;
+  
+  /* Reducimos la altura mínima si es necesario para que no ocupe tanto espacio vacío abajo */
+  min-height: auto; 
+  width: 100%;
+  
+  /* Ajusta este padding para que no quede PEGADO al borde de la pantalla, 
+     pero sí muy arriba. Si tienes Navbar fija, dale unos 80px-100px 
+     para que no quede tapado por ella. */
+  padding-bottom: 120px; 
+  padding-bottom: 2rem;
+  
+  background-color: transparent;
+  perspective: 1000px;
+}
+
+/* Asegúrate de que el H1 no tenga margen superior extra */
+.big-name {
+  margin-top: 0; 
+  line-height: 0.9; /* Compacta la altura de la línea */
+  /* ... resto de estilos ... */
+} 
+
+/* src/pages/Inicio/HomeElements/css/TitleSection.css */
+
+/* ... tus estilos normales arriba ... */
+
+/* src/pages/Inicio/HomeElements/css/TitleSection.css */
+
+/* ... tus estilos de escritorio arriba ... */
+
+/* --- AJUSTE MÓVIL AGRESIVO --- */
+@media (max-width: 768px) {
+  .title-section-container {
+    padding: 2rem 0;
+    width: 100%;
+    overflow: hidden; /* Corta cualquier cosa que intente salirse */
+  }
+
+  .big-name {
+    /* "Stephan" son 7 letras. 14vw es el número mágico para que quepan */
+    font-size: 14vw; 
+    letter-spacing: -0.02em; /* No las pegues tanto en móvil para que se lean */
+    width: 100%;
+    text-align: center;
+    line-height: 1.2; /* Dale aire arriba y abajo */
+    
+    /* Aseguramos que el contenedor no sea más ancho que la pantalla */
+    max-width: 100vw; 
+    box-sizing: border-box;
+  }
+
+  .trademark {
+    /* El truco: Hacemos el TM más pequeño y lo pegamos ARRIBA, no a la derecha */
+    font-size: 0.15em; 
+    top: -0.2em; /* Lo subimos */
+    right: 0; /* Lo alineamos a la derecha de la letra N, no afuera */
+    position: relative; /* Cambiamos a relative para que no flote fuera */
+    vertical-align: super;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.75rem; /* Un poco más pequeño */
+    padding: 0 10px; /* Margen de seguridad */
+  }
+}

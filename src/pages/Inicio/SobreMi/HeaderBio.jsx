@@ -25,7 +25,7 @@ const HeaderBio = () => {
     // CAMBIO 3: '1.5vw' es muy pequeño en celular. 
     // clamp(mínimo, ideal, máximo) hace que el texto sea responsive pero legible.
     fontSize: 'clamp(1.2rem, 1.5vw, 2.5rem)', 
-    maxWidth: '90%', // Un poco más ancho para aprovechar espacio
+    maxWidth: '100%', // Un poco más ancho para aprovechar espacio
     lineHeight: '1.5', // Un poco más de aire entre líneas
     fontWeight: 300,
     letterSpacing: '0.5px',

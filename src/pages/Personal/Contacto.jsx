@@ -53,11 +53,8 @@ const Contacto = () => {
 
         {/* LADO DERECHO: FORMULARIO */}
         <div className="contact-form-wrapper">
-            {/* NOTA: Para que este formulario funcione sin backend, 
-                puedes usar https://formspree.io/
-                Solo regístrate gratis, crea un form y pega la URL en action=""
-            */}
-          <form action="https://formspree.io/f/TU_ID_DE_FORMSPREE" method="POST">
+            
+          <form action="https://formspree.io/f/mqarwbkv" method="POST">
             
             <div className="form-group">
               <label htmlFor="name" className="form-label">Tu Nombre</label>

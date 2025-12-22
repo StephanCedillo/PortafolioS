@@ -1,10 +1,10 @@
 import React from "react";
-import "./css/Habilidades.css"; // ¡Importante importar el CSS!
+import "./css/Habilidades.css"; 
 
 const SKILL_DATA = [
   {
     category: "Desarrollo Web",
-    gradClass: "grad-red", // Referencia a la clase CSS del gradiente
+    gradClass: "grad-red", 
     icon: (
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
     ),

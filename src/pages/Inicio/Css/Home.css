@@ -161,21 +161,7 @@ hr {
 }
 
 /* ESTILO DE TARJETA DE CRISTAL */
-.glass-card {
-  background: rgba(15, 15, 15, 0.6); /* Oscuro translúcido */
-  backdrop-filter: blur(12px); /* Efecto borroso detrás */
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.08); /* Borde sutil */
-  border-radius: 24px;
-  padding: 40px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease, border-color 0.3s ease;
-}
 
-.glass-card:hover {
-  border-color: rgba(190, 35, 35, 0.3); /* Un toque rojo suave al pasar el mouse */
-  transform: translateY(-5px); /* Pequeña elevación */
-}
 
 /* Ajuste responsive */
 @media (max-width: 768px) {
@@ -191,7 +177,7 @@ hr {
   /* INCORRECTO: height: 100vh; (Esto bloquea el scroll si el contenido es mayor) */
   
   /* CORRECTO: */
-  min-height: 100vh; 
+  min-height: 120vh; 
   
   overflow-x: hidden; /* Solo ocultamos el scroll horizontal */
   /* Asegúrate de NO tener overflow-y: hidden aquí ni en el body */
@@ -261,5 +247,18 @@ html, body, #root {
   }
   hr {
     width: 90%;
+  }
+}
+
+/* src/pages/Inicio/Css/Home.css */
+
+/* ... tus estilos normales arriba ... */
+
+@media (max-width: 768px) {
+  .inicio-content {
+    /* Reducimos el padding lateral drásticamente */
+    padding: 80px 15px 50px 15px; 
+    gap: 40px; /* Menos espacio entre secciones */
+    max-width: 100%; /* Asegurar que use todo el ancho */
   }
 }

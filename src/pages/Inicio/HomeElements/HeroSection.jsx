@@ -36,7 +36,6 @@ const HeroSection = () => {
           Creative developer <br />
           blending logic <br />
           and art.<br />
-          Stephan Cedillo
         </h1>
         <br />
         <div className="hero-skills-wrapper">
@@ -47,7 +46,7 @@ const HeroSection = () => {
             <span className="skill-item">Art Direction</span>
             <span className="skill-item">Strategy</span>
             <span className="skill-item">Design</span>
-            <span className="skill-item">Development</span>
+            <span className="skill-item"></span>
           </div>
         </div>
       </div>

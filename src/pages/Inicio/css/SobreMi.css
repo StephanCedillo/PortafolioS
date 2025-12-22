@@ -1,0 +1,65 @@
+/* src/pages/Inicio/SobreMi/css/SobreMi.css */
+
+.sobre-mi-container {
+    width: 100%;
+    /* Aseguramos que llegue a los 1200px */
+    min-width: 1200px; 
+    margin: 0 auto; /* Centrado en pantallas grandes */
+    
+    min-height: 30vh;
+    background-color: transparent; 
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+  
+    /* --- MODO PC (GRID) --- */
+    display: grid;
+    
+    /* CAMBIO CLAVE: 30% Foto / 70% Texto. 
+       Esto hace el texto mucho más ANCHO y menos alto. */
+    grid-template-columns: 30% 70%; 
+    
+    align-items: center; 
+}
+  
+/* --- COLUMNA FOTO --- */
+.columna-perfil {
+    width: 100%;
+    height:80%; 
+    position: relative;
+    display: flex;
+    justify-content: center; /* Centra la foto en su columna más pequeña */
+    align-items: center;
+}
+  
+/* --- COLUMNA TEXTO --- */
+.columna-bio {
+    width: 100%;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    /* CAMBIO: Reducimos padding lateral para ganar espacio útil */
+    padding: 0 1rem; 
+}
+  
+/* --- MÓVILES Y TABLETS --- */
+@media (max-width: 960px) {
+    .sobre-mi-container {
+      display: flex;
+      flex-direction: column-reverse;
+      height: auto;
+      max-width: 100%; 
+      min-width: 150px;
+    }
+  
+    .columna-bio {
+      padding: 60px 20px 30px 20px; 
+      text-align: left;
+    }
+  
+    .columna-perfil {
+      height: 40vh;
+    }
+}

@@ -1,14 +1,13 @@
-
-import { useState } from 'react';
-import LiquidEther from '../../Components/UI/EffectBackground';
-import './Css/Home.css';
+import React from 'react';
+import LiquidEther from '../../Components/UI/EffectBackground'; // Adjust path as needed
 import HeroSection from './HomeElements/HeroSection';
 import TitleSection from './HomeElements/TitleSection';
+import './Css/Home.css'; // Your Home specific CSS
 
 export default function Home() {
     return (
-        <div className="effect-section">
-          {/* Fondo fluido */}
+        <div className="inicio-container">
+          {/* Fondo fluido fijo */}
           <div className="background-effect">
             <LiquidEther
               colors={['#BE2323', '#FF9E9E', '#B19EEF']}
@@ -29,15 +28,15 @@ export default function Home() {
             />
           </div>
     
-          {/* Contenido encima */}
-          <div className="content">
-            {/* Título y Habilidades del diseño original */}
+          {/* Contenido desplazable (Scrollable) */}
+          <div className="inicio-content">
+            {/* Sección 1: Introducción y Foto 3D */}
             <HeroSection /> 
             
-            {/* Nombre grande del diseño original */}
-             <TitleSection name="" /> 
+            {/* Sección 2: Nombre Gigante (Marca) */}
+            <TitleSection /> 
 
-            {/* Placeholder de ejemplo */}
+            {/* Aquí puedes agregar más secciones como <AboutText />, <Skills />, etc. */}
           </div>
         </div>
       );

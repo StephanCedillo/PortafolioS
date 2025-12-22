@@ -1,8 +1,8 @@
 /* src/components/css/SobreMi.css */
 
-/* --- ESTRUCTURA DE LA SECCIÓN (Para que coincida con el resto) --- */
+/* --- ESTRUCTURA DE LA SECCIÓN --- */
 .sobre-mi-section {
-  background-color: #0d1117; /* Mismo fondo dark que el resto */
+  background-color: #0d1117;
   padding: 5rem 1.5rem;
   display: flex;
   justify-content: center;
@@ -17,9 +17,9 @@
   z-index: 2;
 }
 
-/* Título de la sección (Estilo consistente) */
+/* Título de la sección */
 .sobre-mi-header {
-  font-family: "Science Gothic", sans-serif; /* Usamos tu fuente también en el título */
+  font-family: "Science Gothic", sans-serif;
   font-size: 3rem;
   font-weight: 900;
   color: white;
@@ -28,42 +28,27 @@
   letter-spacing: -0.02em;
 }
 
-.sobre-mi-header span {
-  /* Usamos tu color rosado/salmón para el highlight */
-  background: linear-gradient(90deg, #FF9E9E, #BE2323); 
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* --- TARJETA DE CONTENIDO --- */
+/* --- CONTENEDOR DE TEXTO (SIN EFECTO CARTA) --- */
 .text-card {
-  background-color: #1f2937; /* Fondo de tarjeta */
-  border: 1px solid #30363d;
-  border-radius: 16px;
-  padding: 2.5rem;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  /* Hemos quitado el background, border, box-shadow y radius */
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0; /* Quitamos el padding interno ya que no hay caja */
   position: relative;
 }
 
-/* Decoración de borde brillante superior */
+/* ELIMINAMOS la línea brillante de arriba */
 .text-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, transparent, #BE2323, transparent);
-  opacity: 0.7;
+  display: none;
 }
 
-/* --- TU CSS ORIGINAL (ESTILOS DE TEXTO) --- */
+/* --- ESTILOS DE TEXTO (Igual que antes) --- */
 .text-content {
   font-family: "Science Gothic", sans-serif;
   font-weight: 300; 
   color: #e0e0e0;
-  line-height: 1.8; /* Aumenté un poco para más elegancia */
+  line-height: 1.8;
   font-size: 1.15rem; 
   letter-spacing: 0.02em; 
 }
@@ -76,7 +61,6 @@
   margin-bottom: 0;
 }
 
-/* Tus estilos para strong */
 .text-content strong {
   font-family: "Science Gothic", sans-serif;
   color: #FF9E9E; 
@@ -88,24 +72,24 @@
 
 .text-content strong:hover {
   color: #B19EEF; 
-  text-shadow: 0 0 12px rgba(177, 158, 239, 0.6); 
 }
 
-/* --- FUN FACT (Tu estilo original optimizado) --- */
+/* --- FUN FACT --- */
 .fun-fact {
   margin-top: 2.5rem;
   padding: 1.5rem;
-  background: rgba(13, 17, 23, 0.5); /* Fondo un poco más oscuro para contraste */
+  /* Hacemos el fondo del fun-fact un poco más sutil para que destaque solo */
+  background: rgba(255, 255, 255, 0.03); 
   border-left: 4px solid #BE2323; 
   border-radius: 0 12px 12px 0;
   display: flex;
   gap: 1.5rem;
-  align-items: flex-start; /* Alineado arriba por si el texto es largo */
+  align-items: flex-start;
   transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .fun-fact:hover {
-  background: linear-gradient(90deg, rgba(190, 35, 35, 0.05), transparent);
+  background: linear-gradient(90deg, rgba(190, 35, 35, 0.1), transparent);
   transform: translateX(8px);
 }
 
@@ -124,8 +108,8 @@
 /* Responsive */
 @media (max-width: 768px) {
   .sobre-mi-header { font-size: 2.2rem; }
-  .text-card { padding: 1.5rem; }
-  .text-content { font-size: 1rem; }
+  /* Ajustamos margenes ya que no hay padding de carta */
+  .text-content { font-size: 1rem; padding: 0 10px; }
   .fun-fact { flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
   .fun-fact .icon { margin-bottom: 0.5rem; }
 }
