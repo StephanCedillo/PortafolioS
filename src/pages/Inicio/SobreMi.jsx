@@ -12,10 +12,6 @@ const SobreMi = () => {
     <section className="sobre-mi-container">
       
       {/* 1. FOTO (En el código va primero) */}
-      <div className="columna-perfil">
-        
-         <Perfil imagenSrc={miFoto} />
-      </div>
 
       {/* 2. TEXTO (En el código va segundo) */}
       {/* Gracias a 'column-reverse' en el CSS, este aparecerá ARRIBA en el celular */}
