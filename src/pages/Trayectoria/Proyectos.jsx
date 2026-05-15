@@ -17,14 +17,14 @@ const PROJECTS = [
     title: "Guawpaw",
     description: "Aplicación de mascota virtual con chatbot educativo. Incluye reconocimiento de entidades y actividades de aprendizaje.",
     tech: ["Angular", "Firebase", "Dialogflow"],
-    image: arch,
+    image: "",
     link: "#"
   },
   {
     title: "Videojuego Twin-Stick",
     description: "Juego de acción multijugador online. Actualmente en desarrollo, con sistema de personajes y armas.",
     tech: ["Godot", "C++", "Pixelrama"],
-    image: juego,
+    image: "",
     link: "#"
   },
   {
@@ -33,6 +33,41 @@ const PROJECTS = [
     tech: ["Linux", "Bash", "Hyprland"],
     image: arch,
     link: "#"
+  },
+  {
+    title: "Pokédex Interactiva",
+    description: "Una Pokédex completa en Angular que permite consultar y comparar Pokémon. Incluye estadísticas detalladas y opción de batallas entre dispositivos.",
+    tech: ["Angular Ionic", "TypeScript"],
+    image: "",
+    link: ""
+  },
+  {
+    title: "Pokédex Interactiva",
+    description: "Una Pokédex completa en Angular que permite consultar y comparar Pokémon. Incluye estadísticas detalladas y opción de batallas entre dispositivos.",
+    tech: ["Angular Ionic", "TypeScript"],
+    image: "",
+    link: ""
+  },
+  {
+    title: "Pokédex Interactiva",
+    description: "Una Pokédex completa en Angular que permite consultar y comparar Pokémon. Incluye estadísticas detalladas y opción de batallas entre dispositivos.",
+    tech: ["Angular Ionic", "TypeScript"],
+    image: "",
+    link: ""
+  },
+  {
+    title: "Pokédex Interactiva",
+    description: "Una Pokédex completa en Angular que permite consultar y comparar Pokémon. Incluye estadísticas detalladas y opción de batallas entre dispositivos.",
+    tech: ["Angular Ionic", "TypeScript"],
+    image: "",
+    link: ""
+  },
+  {
+    title: "Pokédex Interactiva",
+    description: "Una Pokédex completa en Angular que permite consultar y comparar Pokémon. Incluye estadísticas detalladas y opción de batallas entre dispositivos.",
+    tech: ["Angular Ionic", "TypeScript"],
+    image: "",
+    link: ""
   },
 ];
 
@@ -59,7 +94,7 @@ const Proyectos = () => {
             onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-10px)';
                 e.currentTarget.style.boxShadow = '0 20px 30px rgba(0,0,0,0.5)';
-                e.currentTarget.style.borderColor = '#60a5fa';
+                e.currentTarget.style.borderColor = '#fa6060';
             }}
             onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
@@ -253,19 +288,19 @@ const styles = {
     display: 'flex', flexDirection: 'column', gap: '1.5rem',
   },
   modalSubtitle: {
-    color: '#60a5fa', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.8rem', margin: 0,
+    color: '#fa6060', textTransform: 'uppercase', letterSpacing: '2px', fontSize: '0.8rem', margin: 0,
   },
   modalTitle: {
     color: 'white', fontSize: '2.5rem', margin: 0, lineHeight: 1.1,
   },
   modalDescription: {
-    color: '#cbd5e1', lineHeight: 1.6, fontSize: '1.05rem',
+    color: '#e1d2cb', lineHeight: 1.6, fontSize: '1.05rem',
   },
   techStackContainer: {
     display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '1rem',
   },
   techTag: {
-    background: 'rgba(96, 165, 250, 0.1)', color: '#60a5fa',
+    background: 'rgba(96, 165, 250, 0.1)', color: '#fa6360',
     padding: '6px 14px', borderRadius: '50px', fontSize: '0.9rem', fontWeight: '500',
   },
   modalActions: {

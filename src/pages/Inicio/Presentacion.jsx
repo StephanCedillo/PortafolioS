@@ -111,10 +111,9 @@ export default function Presentacion() {
               {String(index + 1).padStart(2, '0')}
             </div>
 
-            {/* El contenido de texto */}
             <div className="skill-content">
               <h3>{nombreCategoria}</h3>
-              {/* Une el array con comas */}
+             
               <p>{tecnologias.join(", ")}</p>
             </div>
           </div>

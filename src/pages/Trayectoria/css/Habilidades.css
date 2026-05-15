@@ -8,7 +8,7 @@
     --border-hover: #8b949e;
     --text-primary: #ffffff;
     --text-secondary: #8b949e;
-    --primary-glow: rgba(56, 189, 248, 0.5); /* Azul neón */
+    --primary-glow: rgba(248, 56, 56, 0.5); /* Azul neón */
   }
   
   /* --- ESTRUCTURA GENERAL --- */
@@ -39,7 +39,7 @@
   }
   
   .hab-title-highlight {
-    background: linear-gradient(to right, #60a5fa, #a855f7);
+    background: linear-gradient(to right, #d92929, #f75555);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -236,7 +236,7 @@
   
   /* Gradientes específicos para CSS puro */
   .grad-red { background: linear-gradient(90deg, #ef4444, #f97316); }
-  .grad-blue { background: linear-gradient(90deg, #3b82f6, #06b6d4); }
+  .grad-blue { background: linear-gradient(90deg, #f63b3b, #d40606); }
   .grad-yellow { background: linear-gradient(90deg, #eab308, #ca8a04); }
   .grad-purple { background: linear-gradient(90deg, #a855f7, #ec4899); }
   

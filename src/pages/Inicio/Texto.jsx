@@ -6,7 +6,7 @@ const AboutText = () => {
   return (
     <div className="text-content">
       <p>
-        <strong>Hola, soy Stephan.</strong> A mis 17 años, me considero un desarrollador 
+        <strong>Hola, soy Stephan.</strong> A mis 18 años, me considero un desarrollador 
         creativo que vive en la intersección entre la lógica y la imaginación. 
         Mi pasión es crear proyectos interactivos que conecten con las personas, 
         ya sea un <strong>videojuego</strong>, una herramienta educativa o una web dinámica.

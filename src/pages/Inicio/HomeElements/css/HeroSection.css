@@ -1,7 +1,7 @@
 .hero-container {
     display: flex;
     justify-content: space-between;
-    min-height: 70vh; /* Ajustar altura según se necesite */
+    min-height: 40vh; /* Ajustar altura según se necesite */
     padding: 50px;
   }
   

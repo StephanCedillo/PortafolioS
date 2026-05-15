@@ -9,9 +9,7 @@ const TrayectoriaSection = () => {
         <Habilidades />
       </section>
 
-      <section id="ejemplos">
-        <Ejemplos />
-      </section>
+     
 
       <section id="estudios">
         <Estudios />

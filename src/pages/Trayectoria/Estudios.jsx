@@ -31,7 +31,7 @@ const Estudios = () => {
               </div>
 
               <h3 className="edu-institution">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fa6060" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
                 Universidad Politécnica Salesiana
               </h3>
               
@@ -50,7 +50,7 @@ const Estudios = () => {
             </div>
           </div>
 
-          {/* ITEM 2: COLEGIO (FINALIZADO) */}
+   
           <div className="edu-item">
             <div className="edu-marker"></div>
             

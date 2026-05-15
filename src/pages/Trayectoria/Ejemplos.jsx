@@ -5,7 +5,7 @@ export default function Ejemplos() {
   const categories = [
     {
       title: "Páginas y Aplicaciones Web",
-      icon: "💻",
+      icon: "",
       levels: [
         {
           tag: "Avanzado",
@@ -41,7 +41,7 @@ export default function Ejemplos() {
     },
     {
       title: "Computadoras y Sistemas",
-      icon: "🐧",
+      icon: "",
       levels: [
         {
           tag: "Avanzado",
@@ -65,7 +65,7 @@ export default function Ejemplos() {
     },
     {
       title: "Programas para PC (Java/Python)",
-      icon: "⚙️",
+      icon: "",
       levels: [
         {
           tag: "Intermedio",
@@ -82,7 +82,7 @@ export default function Ejemplos() {
     },
     {
       title: "Guardado de Datos",
-      icon: "💾",
+      icon: "",
       levels: [
         {
           tag: "Intermedio",
@@ -105,7 +105,7 @@ export default function Ejemplos() {
     },
     {
       title: "Creatividad y Diseño",
-      icon: "🎨",
+      icon: "",
       levels: [
         {
           tag: "Intermedio",

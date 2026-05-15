@@ -4,7 +4,7 @@
     --contact-bg: #0d1117;
     --contact-card: #1f2937;
     --contact-border: #30363d;
-    --contact-accent: #3b82f6; /* Azul */
+    --contact-accent: #f63b3b; /* Azul */
     --contact-text: #e5e7eb;
     --contact-label: #9ca3af;
   }
@@ -39,7 +39,7 @@
   }
   
   .contact-highlight {
-    background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+    background: linear-gradient(90deg, #f63b3b, #f65c5c);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
@@ -138,7 +138,7 @@
   .send-btn {
     width: 100%;
     padding: 1rem;
-    background: linear-gradient(90deg, #2563eb, #4f46e5);
+    background: linear-gradient(90deg, #eb2525, #e58e46);
     color: white;
     border: none;
     border-radius: 8px;
@@ -154,7 +154,7 @@
   
   .send-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 10px 20px rgba(235, 53, 37, 0.4);
   }
   
   .send-btn:active {

@@ -4,8 +4,8 @@
     --footer-bg: #05080f; /* Un poco más oscuro que el resto */
     --footer-border: #30363d;
     --footer-text: #8b949e;
-    --btn-gradient: linear-gradient(135deg, #3b82f6, #8b5cf6);
-    --btn-hover: linear-gradient(135deg, #2563eb, #7c3aed);
+    --btn-gradient: linear-gradient(135deg, #f6573b, #f6645c);
+    --btn-hover: linear-gradient(135deg, #eb3c25, #ed793a);
   }
   
   .footer-section {
@@ -71,7 +71,7 @@
     padding: 1rem 2.5rem;
     border-radius: 99px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 4px 15px rgba(246, 59, 59, 0.4);
     position: relative;
     overflow: hidden;
   }
@@ -90,7 +90,7 @@
   
   .download-btn:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 10px 25px rgba(246, 59, 59, 0.6);
   }
   
   .download-btn:hover::before {

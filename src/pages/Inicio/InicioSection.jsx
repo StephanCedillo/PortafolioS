@@ -11,7 +11,6 @@ const InicioSection = () => {
       <div className="background-effect">
         <LiquidEther
           colors={['#BE2323', '#FF9E9E', '#B19EEF']} 
-          // ... tus configuraciones ...
           mouseForce={20}
           cursorSize={100}
           autoDemo={true}
@@ -24,15 +23,9 @@ const InicioSection = () => {
           <Home />
         </section>
 
-        {/* CONTENEDOR DE PERFIL: Agrupa Historia y Skills */}
         <div className="profile-wrapper">
             
-            {/* Tarjeta 1: Quién soy */}
-            <section id="sobremi" className="glass-card">
-              <SobreMi />
-            </section>
-
-            {/* Tarjeta 2: Mis Herramientas (El diagrama) */}
+  
             <section id="skills" className="glass-card">
               <Presentacion />
             </section>

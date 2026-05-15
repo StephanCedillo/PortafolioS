@@ -28,15 +28,15 @@ export default function Home() {
             />
           </div>
     
-          {/* Contenido desplazable (Scrollable) */}
+        
           <div className="inicio-content">
-            {/* Sección 1: Introducción y Foto 3D */}
+           
             <HeroSection /> 
             
-            {/* Sección 2: Nombre Gigante (Marca) */}
+            
             <TitleSection /> 
 
-            {/* Aquí puedes agregar más secciones como <AboutText />, <Skills />, etc. */}
+            
           </div>
         </div>
       );

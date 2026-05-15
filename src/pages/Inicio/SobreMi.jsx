@@ -11,10 +11,7 @@ const SobreMi = () => {
   return (
     <section className="sobre-mi-container">
       
-      {/* 1. FOTO (En el código va primero) */}
-
-      {/* 2. TEXTO (En el código va segundo) */}
-      {/* Gracias a 'column-reverse' en el CSS, este aparecerá ARRIBA en el celular */}
+     
       <div className="columna-bio">
         <HeaderBio />
       </div>

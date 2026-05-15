@@ -1,7 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "./Css/Navbar.css";
-// IMPORTA TU FOTO AQUÍ
-// Si no tienes la foto en assets aún, comenta la línea de import y la etiqueta img
+
 import profilePic from "./icon.png"; 
 
 const Navbar = () => {
@@ -14,14 +13,9 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar-container">
         
-        {/* IZQUIERDA: LOGO + AVATAR */}
+      
         <div className="navbar-brand">
-            <div className="avatar-container">
-               
-                <img src={profilePic} alt="Stephan" className="avatar-img" />
-                {/* Un punto verde indicando "Online/Open to work" */}
-                <span className="status-dot"></span>
-            </div>
+            
             <Link to="/" className="brand-name">
                 Stephan<span className="cursor">_</span>
             </Link>

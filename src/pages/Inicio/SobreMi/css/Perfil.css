@@ -8,7 +8,7 @@
   }
   
   .perfil-imagen {
-    width: 200px;            /* Tamaño de la foto */
+    width: 10px;            /* Tamaño de la foto */
     height:200px;           /* Debe ser igual al ancho para ser círculo */
     object-fit: cover;       /* CRUCIAL: Evita que la foto se estire o aplaste */
     object-position: top;    /* Centra el enfoque en la cara, no en el pecho */
