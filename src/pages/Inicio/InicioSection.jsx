@@ -2,10 +2,15 @@ import Home from "./Home";
 import Presentacion from "./Presentacion";
 import SobreMi from "./SobreMi";
 import AboutText from "./Texto";
+import React, { useState } from "react";
 import LiquidEther from "../../Components/UI/EffectBackground";
 import "./Css/Home.css";
 
+import Principal from "./Principal";
+  
+
 const InicioSection = () => {
+   //const [selectedProject, setSelectedProject] = useState(null);
   return (
     <div className="inicio-container">
       <div className="background-effect">
@@ -18,7 +23,7 @@ const InicioSection = () => {
       </div>
 
       <div className="inicio-content">
-        {/* Intro Principal */}
+     
         <section id="home" className="section-block">
           <Home />
         </section>
@@ -31,7 +36,13 @@ const InicioSection = () => {
             </section>
             <section id="about" className="glass-card">
               <AboutText />
+             
             </section>
+            <section id="principal" className="glass-card">
+              <Principal />
+             
+            </section>
+            
 
         </div>
       </div>

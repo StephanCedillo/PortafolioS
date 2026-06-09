@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import './css/HeroSection.css';
-import computerImg from '../assets/programming.png';
+import computerImg from '../../../assets/image.png';
 
 const HeroSection = () => {
   const imageRef = useRef(null);

@@ -1,59 +1,86 @@
-/* src/components/css/SobreMi.css */
 
-/* --- ESTRUCTURA DE LA SECCIÓN --- */
-.sobre-mi-section {
-  background-color: #0d1117;
-  padding: 5rem 1.5rem;
-  display: flex;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
 
-.sobre-mi-container {
-  max-width: 800px;
-  width: 100%;
-  position: relative;
-  z-index: 2;
-}
-
-/* Título de la sección */
-.sobre-mi-header {
-  font-family: "Science Gothic", sans-serif;
-  font-size: 3rem;
-  font-weight: 900;
-  color: white;
-  margin-bottom: 2.5rem;
-  text-align: center;
-  letter-spacing: -0.02em;
-}
-
-/* --- CONTENEDOR DE TEXTO (SIN EFECTO CARTA) --- */
-.text-card {
-  /* Hemos quitado el background, border, box-shadow y radius */
-  background: transparent;
-  border: none;
-  box-shadow: none;
-  padding: 0; /* Quitamos el padding interno ya que no hay caja */
-  position: relative;
-}
-
-/* ELIMINAMOS la línea brillante de arriba */
-.text-card::before {
-  display: none;
-}
-
-/* --- ESTILOS DE TEXTO (Igual que antes) --- */
 .text-content {
   font-family: "Science Gothic", sans-serif;
   font-weight: 300; 
+  width: 70%;
+  padding: auto;
+  margin: 0.5em auto;
+  border-radius: 10px;
   color: #e0e0e0;
   line-height: 1.8;
   font-size: 1.15rem; 
   letter-spacing: 0.02em; 
+ 
+}
+.text-content::before {
+  border-radius: 50%;
+  width: 6rem;
+  height: 6rem;
+  top: 30%;
+  right: 7%;
+}
+.text-content::after {
+  content: "";
+  position: absolute;
+  height: 3rem;
+  top: 8%;
+  right: 5%;
+  border: 1px solid;
+}
+
+.text-content .box {
+
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
+}
+
+.text-content .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.text-content .box .title {
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 0.1em;
+}
+
+.text-content .box div strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.text-content .box div p {
+  margin: 0;
+  font-size: 0.9em;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.text-content .box div span {
+  font-size: 0.7rem;
+  font-weight: 300;
+}
+
+.text-content .box div span:nth-child(3) {
+  font-weight: 500;
+  margin-right: 0.2rem;
+}
+
+.text-content .box:hover {
+  box-shadow: 0px 0px 20px 1px #ffbb763f;
+  border: 1px solid rgba(255, 255, 255, 0.454);
 }
 
 .text-content p {
+  padding: 10px 10px 10px ;
   margin-bottom: 1.5rem;
 }
 
@@ -68,18 +95,19 @@
   position: relative;
   transition: all 0.3s ease;
   cursor: default;
+  
 }
 
 .text-content strong:hover {
-  color: #B19EEF; 
+  color: #cbc7da; 
 }
 
-/* --- FUN FACT --- */
+
 .fun-fact {
   margin-top: 2.5rem;
   padding: 1.5rem;
-  /* Hacemos el fondo del fun-fact un poco más sutil para que destaque solo */
-  background: rgba(255, 255, 255, 0.03); 
+
+  background: rgba(255, 255, 255, 0.509); 
   border-left: 4px solid #BE2323; 
   border-radius: 0 12px 12px 0;
   display: flex;
@@ -108,7 +136,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .sobre-mi-header { font-size: 2.2rem; }
-  /* Ajustamos margenes ya que no hay padding de carta */
+
   .text-content { font-size: 1rem; padding: 0 10px; }
   .fun-fact { flex-direction: column; gap: 0.5rem; align-items: center; text-align: center; }
   .fun-fact .icon { margin-bottom: 0.5rem; }

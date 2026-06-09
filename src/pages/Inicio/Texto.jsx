@@ -5,7 +5,9 @@ import "./css/Texto.css";
 const AboutText = () => {
   return (
     <div className="text-content">
+      <div className="box">
       <p>
+
         <strong>Hola, soy Stephan.</strong> A mis 18 años, me considero un desarrollador 
         creativo que vive en la intersección entre la lógica y la imaginación. 
         Mi pasión es crear proyectos interactivos que conecten con las personas, 
@@ -24,7 +26,7 @@ const AboutText = () => {
         sistemas de estadísticas y progreso. Mi objetivo es siempre entregar 
         proyectos que combinen utilidad con un diseño <strong>minimalista y funcional</strong>.
       </p>
-
+</div>
       <div className="fun-fact">
         <span className="icon">🏔️</span>
         <p>
